@@ -3,20 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <script src="skrypt.js"></script> -->
 </head>
 <body>
-    <h1>Pierwszy skrypt w JS</h1>
+    <input type="number" name="Liczba" placeholder="Podaj liczbę"/>
+    <button>Oblicz</button>
+    <div class="wynik">Tutaj będzie wynik</div>
     <script>
-        // okno informacyjne
-        //  alert("Uwaga, ferie sie skonczyly")
+        //pobieramy przycisk button oraz div'a o klasie wynik
+        const btn = document.querySelector('button');
+        const divW = document.querySelector('div.wynik');        
 
-        //  okno decyzyjne
-        // confirm("Czy aby na pewno ferie sie zakończyły?")
-        // okno tekstwoe
-        prompt("Podaj ilosc dni ferii: ")
+        //obsługujemy przycisk myszki
+        btn.addEventListener('click', function() {
+            const liczbaZInputa = document.querySelector('input[name="Liczba"]').value;
+                   
+            //do diva o klasie wynik dodajemy odpowiednia zawartosc
+            if(liczbaZInputa > 5){
+        divW.textContent = `Liczba jest wieksza od 5`;
+            }
+            else{
+                divW.textContent = `Liczba jest mneijsza lub równa od 5`;
+            }
+            if(liczbaZInputa =/= 6){
+        divW.textContent = `Liczba jest różna od 6`;
+            }
+            else{
+                divW.textContent = ``;
+            }
+
+        });
+
     </script>
 </body>
 </html>

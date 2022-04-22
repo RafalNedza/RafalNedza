@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="Liczba1" placeholder="Podaj początek przedziału"/>
+    <input type="number" name="Liczba2" placeholder="Podaj koniec przedziału"/>
+    <button>Oblicz</button>
+    <div class="wynik">Tutaj będzie wynik</div>
+    <script>
+        //pobieramy przycisk button oraz div'a o klasie wynik
+        const btn = document.querySelector('button');
+        const divW = document.querySelector('div.wynik');        
+
+        //obsługujemy przycisk myszki
+        btn.addEventListener('click', function() {
+            const liczbaZInputa1 = document.querySelector('input[name="Liczba1"]').value;
+            const liczbaZInputa2 = document.querySelector('input[name="Liczba2"]').value;
+
+            
+        });
+        for( i=1; i<=5; i++)
+            System.out.println(liczbaZInputa1);
+                if(i%2==0)
+                divW.textContent = i;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="liczba" placeholder="Podaj miesiac"/>
+    <button>sprawdz</button>
+    <div class="wynik"></div>
+    <script>
+        //pobieramy elementy html strony
+        const poleInput = document.querySelector (input(name="liczba"));
+        const btn = document.querySelector('button');
+        const div = document.querySelector('div.wynik');
+
+        //obsluga klikania w przycisk
+        btn.addEventListener('click', function()
+        {
+            //pobieramy wartosc pola input
+            const wartoscPolaInput = poleInput.value;
+
+            switch(wartoscPolaInput){
+                case 1:
+                div.textContent = 'Twoj wybór to styczen'
+                break;
+                div.textContent = 'Twoj wybór to luty'
+                break;
+                case 3:
+                div.textContent = 'Twoj wybór to marzec'
+                break;
+                case 4:
+                div.textContent = 'Twoj wybór to kwiecien'
+                break;
+                case 5:
+                div.textContent = 'Twoj wybór to maj'
+                break;
+                case 6:
+                div.textContent = 'Twoj wybór to czerwiec'
+                break;
+                default:
+                    div.textContent = "Nie znam takiego miesiaca :("
+            }
+        })
+
+
+    </script>
+    
+</body>
+</html>
